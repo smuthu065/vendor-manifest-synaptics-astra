@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest>
+    <yocto version="kirkstone" />
+    <remote fetch="https://github.com/rdkcentral" name="rdkcentral" review="https://github.com/rdkcentral" />
+    <remote fetch="https://git.yoctoproject.org" name="oe" review="https://git.yoctoproject.org" />
+    <remote fetch="https://github.com/synaptics-astra" name="synaptics" review="https://github.com/synaptics-astra" />
+    <remote fetch="https://github.com/smuthu065" name="smuthu065" review="https://github.com/smuthu065" />
+
+    <project groups="buildscripts" name="build-scripts" path="scripts" remote="rdkcentral" revision="refs/tags/1.0.1">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_SCRIPTS" />
+    </project>
+
+    
+    <submanifest name="common" project="rdke-generic-manifest" manifest-name="rdke-common-layers.xml" path="rdke/common" remote="rdkcentral" revision="refs/tags/1.0.1">
+    </submanifest>
+
+    
+    <submanifest name="configs" project="rdke-generic-manifest" manifest-name="rdke-configs-layers.xml" path="rdke/configs" remote="rdkcentral" revision="refs/tags/1.0.1">
+    </submanifest>
+
+    
+    <project groups="products" name="meta-product-synaptics-astra" path="rdke/product/meta-product-synaptics-astra" remote="smuthu065" revision="develop">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_PRODUCT_LAYER" />
+    </project>
+    
+    
+    <project groups="products" name="meta-vendor-synaptics-astra-oss" path="rdke/vendor/meta-vendor-synaptics-astra-oss" remote="smuthu065" revision="develop">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_OSS_VENDOR" />
+    </project>
+    
+    <project groups="layers" name="meta-vendor-synaptics-astra-dev" path="rdke/vendor/meta-vendor-synaptics-astra-dev" remote="smuthu065" revision="develop">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_PLATFORM" />
+        <annotation name="MANIFEST_EXPORT_PATH1" value="MANIFEST_PATH_BBLAYERS_TEMPLATE" />
+    </project>
+    
+    <project groups="layers" name="meta-synaptics" path="rdke/vendor/soc/meta-synaptics" remote="synaptics" revision="kirkstone_5.15_v1.8.0">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_BSP" />
+    </project>
+
+</manifest>
