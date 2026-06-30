@@ -6,6 +6,7 @@
     <remote fetch="https://github.com/synaptics-astra" name="synaptics" review="https://github.com/synaptics-astra" />
     <remote fetch="https://github.com/smuthu065" name="smuthu065" review="https://github.com/smuthu065" />
     <remote fetch="https://github.com/sbabic" name="sbabic" review="https://github.com/sbabic" />
+    <remote fetch="https://code.qt.io/yocto" name="qt" review="https://code.qt.io/yocto" />
 
     <project groups="buildscripts" name="build-scripts" path="scripts" remote="rdkcentral" revision="refs/tags/1.0.1">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_SCRIPTS" />
@@ -36,6 +37,10 @@
     
     <project groups="layers" name="meta-swupdate" path="rdke/vendor/soc/meta-swupdate" remote="sbabic" revision="6918be849ddf1fed5b7a0173e51c7a136e8d4101">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_SWUPDATE" />
+    </project>
+
+    <project groups="layers" name="meta-qt5" path="rdke/vendor/meta-qt5" remote="qt" revision="644ebf220245bdc06e7696ccc90acc97a0dd2566">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_QT5" />
     </project>
 
     <project groups="layers" name="meta-synaptics" path="rdke/vendor/soc/meta-synaptics" remote="synaptics" revision="kirkstone_5.15_v1.8.0">
