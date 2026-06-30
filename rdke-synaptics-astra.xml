@@ -5,6 +5,7 @@
     <remote fetch="https://git.yoctoproject.org" name="oe" review="https://git.yoctoproject.org" />
     <remote fetch="https://github.com/synaptics-astra" name="synaptics" review="https://github.com/synaptics-astra" />
     <remote fetch="https://github.com/smuthu065" name="smuthu065" review="https://github.com/smuthu065" />
+    <remote fetch="https://github.com/sbabic" name="sbabic" review="https://github.com/sbabic" />
 
     <project groups="buildscripts" name="build-scripts" path="scripts" remote="rdkcentral" revision="refs/tags/1.0.1">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_SCRIPTS" />
@@ -33,6 +34,10 @@
         <annotation name="MANIFEST_EXPORT_PATH1" value="MANIFEST_PATH_BBLAYERS_TEMPLATE" />
     </project>
     
+    <project groups="layers" name="meta-swupdate" path="rdke/vendor/soc/meta-swupdate" remote="sbabic" revision="6918be849ddf1fed5b7a0173e51c7a136e8d4101">
+        <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_SWUPDATE" />
+    </project>
+
     <project groups="layers" name="meta-synaptics" path="rdke/vendor/soc/meta-synaptics" remote="synaptics" revision="kirkstone_5.15_v1.8.0">
         <annotation name="MANIFEST_EXPORT_PATH" value="MANIFEST_PATH_BSP" />
     </project>
